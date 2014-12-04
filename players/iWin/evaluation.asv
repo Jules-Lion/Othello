@@ -1,4 +1,4 @@
-function [value] = evaluation(board, color, moves_list)
+function [value = evaluation(board, color, moves_list)
 
 %% Initialize valueTable
     valueTable = [  99,  -8,  8,  6,  6,  8,  -8, 99;
@@ -52,8 +52,7 @@ function [value] = evaluation(board, color, moves_list)
                 gegSteine = gegSteine +1;
             end 
             
-
-                
+            
         end
     end
 end
