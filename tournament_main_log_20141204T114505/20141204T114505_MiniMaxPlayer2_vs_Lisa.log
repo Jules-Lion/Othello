@@ -1,0 +1,22 @@
+MiniMaxPlayer2 against Lisa:
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+Lisa (-1) to move (time left: 5.0 sec.):
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0    -1    -1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+MiniMaxPlayer2 (1) to move (time left: 5.0 sec.):
+Output argument "min_v" (and maybe others) not assigned during call to "/Users/markus/Othello_ST/players/iWin/MiniMax.m>min".

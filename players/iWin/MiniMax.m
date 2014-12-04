@@ -1,7 +1,8 @@
 
-function [max_v, b] = MiniMax(board, depth, color)
+function [max_v, b] = MiniMax(board, depth, color, alpha, beta)
 
-max_value = 0;
+anfangstiefe = 4;
+max_value = alpha;
 moves_list = [];
 b = board;
 firstFlag = 0;
@@ -32,11 +33,18 @@ else
     
     new_board = apply_move(board, color, moves_list(num_moves,:));                                        % muss noch geschrieben werden
     
-    value = min (-color, depth-1, new_board);
+    value = min (-color, depth-1, new_board, max_value, beta);
 
         if (value > max_value)
-            max_value = value;                             
-            best_move_max = moves_list(num_moves,:);           
+            max_value = value;    
+            if (max_value >= beta)
+               break; 
+            end
+            
+            if (depth == anfangstiefe)
+                b = apply_move(board, color, moves_list(num_moves,:));
+            end
+            %best_move_max = moves_list(num_moves,:);           
         end
     
    num_moves = num_moves - 1;
@@ -47,9 +55,9 @@ end
         
 end
 
-function [min_v]  = min(color, depth, board)
+function [min_v]  = min(color, depth, board, alpha, beta)
 
-min_value = 1000000;
+min_value = beta;
 moves_list = [];
 firstFlag = 0;
 
@@ -60,8 +68,7 @@ for i = 1:8
         if ~isempty(b_neu)
             if firstFlag == 0
                 moves_list = [i, k];
-                best_move_max = [i,k];
-                b = apply_move(board, color, best_move_max);
+                b = apply_move(board, color, moves_list);
                 firstFlag = 1;
             else 
                 moves_list = [moves_list; [i, k]];
@@ -73,16 +80,19 @@ end
 num_moves = size(moves_list, 1);
 
 if (depth == 0 || num_moves == 0)                     
-        min_v = evaluation(board, color, moves_list);                         
+        min_v = evaluation(board, color, moves_list); 
+else
     while (num_moves)
     
         new_board = apply_move(board, color, moves_list(num_moves,:));
         
-        [value, best_move_max] = MiniMax(new_board, depth-1, -color);
+        [value, someBoard] = MiniMax(new_board, depth-1, -color, alpha, min_value);
              
         if (value < min_value)
-            min_value = value;                          
-            best_move_max = moves_list(num_moves,:);        
+            min_value = value;
+            if (min_value <= alpha)
+                break;
+            end
         end
         
         num_moves = num_moves - 1;

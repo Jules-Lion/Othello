@@ -1,0 +1,1 @@
+2014-12-04 11:45:05	MiniMaxPlayer2	0	Lisa	64	Output argument "min_v" (and maybe others) not assigned during call to "/Users/markus/Othello_ST/players/iWin/MiniMax.m>min".

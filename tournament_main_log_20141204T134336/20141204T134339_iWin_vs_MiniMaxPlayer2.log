@@ -1,0 +1,12 @@
+iWin against MiniMaxPlayer2:
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+MiniMaxPlayer2 (-1) to move (time left: 180.0 sec.):
+Undefined function or variable "b".

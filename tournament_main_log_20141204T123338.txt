@@ -1,0 +1,1 @@
+2014-12-04 12:33:38	MiniMaxPlayer2	64	Lisa	0	Error: Player has exceeded the budget.
