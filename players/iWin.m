@@ -16,6 +16,6 @@ function b = iWin(board, color, time)
         depth = 6;
     end
             
-    [val, b] = MiniMax(board, depth, color, -inf, inf);
+    [val, b] = WeWinMagic(board, depth, color, -inf, inf, depth);
 
 end

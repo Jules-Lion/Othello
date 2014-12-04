@@ -1,3 +1,0 @@
-2014-12-04 13:43:36	MiniMaxPlayer2	0	Lisa	64	Undefined function or variable "b".
-2014-12-04 13:43:38	iWin	0	Lisa	64	Undefined function or variable "b".
-2014-12-04 13:43:39	iWin	64	MiniMaxPlayer2	0	Undefined function or variable "b".
