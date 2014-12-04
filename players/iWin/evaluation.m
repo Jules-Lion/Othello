@@ -170,17 +170,31 @@ function score = evaluation(board, color, moves_list)
     
 	closeness = -12.5 * (eigSteine - gegSteine);
 
-%     % Mobilitaet berechnen
-% 	eigSteine = num_valid_moves(my_color, opp_color, board);
-% 	gegSteine = num_valid_moves(opp_color, my_color, board);
-% 	if(eigSteine > gegSteine)
-% 		mobility = (100.0 * eigSteine)/(eigSteine + gegSteine);
-%     elseif(eigSteine < gegSteine)
-% 		mobility = -(100.0 * gegSteine)/(eigSteine + gegSteine);
-%     else
-%         moblity = 0;
-%     end % if(eigSteine > gegSteine)
-mobility = 0;
+    %HIER BEGINNT GEWURSCHTEL VON MARKUS, WENN NICHT GEWÜNSCHT -> LÖSCHEN
+    enemy_moves = 0;
+    
+    for i = 1:8
+        for k = 1:8
+            b_neu = apply_move(board, -color, [i, k]);
+            if ~isempty(b_neu)
+                enemy_moves = enemy_moves + 1;
+            end
+        end
+    end
+    
+    %HIER ENDET GEWURSCHTEL VON MARKUS, WENN NICHT GEWÜNSCHT -> LÖSCHEN
+    
+    mobility = 0;
+    % Mobilitaet berechnen
+	eigSteine = size(moves_list, 1);
+	gegSteine = enemy_moves;
+	if(eigSteine > gegSteine)
+		mobility = (100.0 * eigSteine)/(eigSteine + gegSteine);
+    elseif(eigSteine < gegSteine)
+		mobility = -(100.0 * gegSteine)/(eigSteine + gegSteine);
+    else
+        moblity = 0;
+    end 
     
     score = (10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (78.922 * mobility)  + (74.396 * rand_Steine) + (10 * value);
 end
