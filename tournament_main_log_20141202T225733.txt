@@ -1,0 +1,1 @@
+2014-12-02 22:57:33	MiniMaxPlayer2	53	MiniMaxPlayer	11	Game over.
