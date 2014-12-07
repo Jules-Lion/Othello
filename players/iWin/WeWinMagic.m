@@ -9,30 +9,30 @@ max_value = alpha;
 
 num_moves = size(moves_list, 1);
 
-if (depth == 0 || num_moves == 0)      
+if (depth == 0 || num_moves == 0)
     b = board;
-    max_v = evaluation(board, color, moves_list);             
-else                                                  
-
-   for k = 1:num_moves
+    max_v = evaluation(board, color, moves_list);
+else
     
-    new_board = boards{k};
-    value = min (-color, depth-1, new_board, max_value, beta, maxDepth);
-
+    for k = 1:num_moves
+        
+        new_board = boards{k};
+        value = min (-color, depth-1, new_board, max_value, beta, maxDepth);
+        
         if (value > max_value)
-            max_value = value;   
+            max_value = value;
             if (max_value >= beta)
-               break; 
+                break;
             end
             
             if (depth == maxDepth)
                 b = new_board;
             end
         end
-   end
-   max_v = max_value;
+    end
+    max_v = max_value;
 end
-        
+
 end
 
 function [min_v]  = min(color, depth, board, alpha, beta, anfangstiefe)
@@ -44,15 +44,15 @@ min_value = beta;
 
 num_moves = size(moves_list, 1);
 
-if (depth == 0 || num_moves == 0)                     
-        min_v = evaluation(board, color, moves_list); 
+if (depth == 0 || num_moves == 0)
+    min_v = evaluation(board, color, moves_list);
 else
     
     for k = 1:num_moves
         new_board = boards{k};
         
         value = WeWinMagic(new_board, depth-1, -color, alpha, min_value, maxDepth);
-             
+        
         if (value < min_value)
             min_value = value;
             if (min_value <= alpha)
@@ -63,8 +63,7 @@ else
     
     min_v = min_value;
 end
-    
-     
+
 end
 
 
