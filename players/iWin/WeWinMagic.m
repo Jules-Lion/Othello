@@ -3,51 +3,32 @@ function [max_v, b] = WeWinMagic(board, depth, color, alpha, beta, anfangstiefe)
 
 maxDepth = anfangstiefe;
 max_value = alpha;
-moves_list = [];
-b = board;
-firstFlag = 0;
 
-for i = 1:8
-    for k = 1:8
-        b_neu = apply_move(board, color, [i, k]);
 
-        if ~isempty(b_neu)
-            if firstFlag == 0
-                moves_list = [i, k];
-                b = apply_move(board, color, moves_list);
-                firstFlag = 1;
-            else 
-                moves_list = [moves_list; [i, k]];
-            end
-        end
-    end
-end
+[ moves_list, boards ] = get_valid_moves(board, color);
 
 num_moves = size(moves_list, 1);
 
-if (depth == 0 || num_moves == 0)                     
-        max_v = evaluation(board, color, moves_list);             
+if (depth == 0 || num_moves == 0)      
+    b = board;
+    max_v = evaluation(board, color, moves_list);             
 else                                                  
 
-   while (num_moves)
+   for k = 1:num_moves
     
-    new_board = apply_move(board, color, moves_list(num_moves,:));                                        % muss noch geschrieben werden
-    
+    new_board = boards{k};
     value = min (-color, depth-1, new_board, max_value, beta, maxDepth);
 
         if (value > max_value)
-            max_value = value;    
+            max_value = value;   
             if (max_value >= beta)
                break; 
             end
             
             if (depth == maxDepth)
-                b = apply_move(board, color, moves_list(num_moves,:));
+                b = new_board;
             end
         end
-    
-   num_moves = num_moves - 1;
-   
    end
    max_v = max_value;
 end
@@ -58,35 +39,19 @@ function [min_v]  = min(color, depth, board, alpha, beta, anfangstiefe)
 
 maxDepth = anfangstiefe;
 min_value = beta;
-moves_list = [];
-firstFlag = 0;
 
-for i = 1:8
-    for k = 1:8
-        b_neu = apply_move(board, color, [i, k]);
-        
-        if ~isempty(b_neu)
-            if firstFlag == 0
-                moves_list = [i, k];
-                b = apply_move(board, color, moves_list);
-                firstFlag = 1;
-            else 
-                moves_list = [moves_list; [i, k]];
-            end
-        end
-    end
-end
+[ moves_list, boards ] = get_valid_moves(board, color);
 
 num_moves = size(moves_list, 1);
 
 if (depth == 0 || num_moves == 0)                     
         min_v = evaluation(board, color, moves_list); 
 else
-    while (num_moves)
     
-        new_board = apply_move(board, color, moves_list(num_moves,:));
+    for k = 1:num_moves
+        new_board = boards{k};
         
-        [value, someBoard] = WeWinMagic(new_board, depth-1, -color, alpha, min_value, maxDepth);
+        value = WeWinMagic(new_board, depth-1, -color, alpha, min_value, maxDepth);
              
         if (value < min_value)
             min_value = value;
@@ -94,8 +59,6 @@ else
                 break;
             end
         end
-        
-        num_moves = num_moves - 1;
     end
     
     min_v = min_value;
