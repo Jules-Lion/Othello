@@ -9,15 +9,18 @@ max_value = alpha;
 
 num_moves = size(moves_list, 1);
 
-if (depth == 0 || num_moves == 0)
+if depth == 0
     b = board;
     max_v = evaluation(board, color, moves_list);
+elseif num_moves == 0
+    % kein gueltiger Zug, suche mit unveraenderten board weiter
+    b = board;
+    max_v = min(-color, depth-1, board, max_value, beta, maxDepth);
 else
-    
     for k = 1:num_moves
         
         new_board = boards{k};
-        value = min (-color, depth-1, new_board, max_value, beta, maxDepth);
+        value = min(-color, depth-1, new_board, max_value, beta, maxDepth);
         
         if (value > max_value)
             max_value = value;
@@ -44,8 +47,10 @@ min_value = beta;
 
 num_moves = size(moves_list, 1);
 
-if (depth == 0 || num_moves == 0)
+if depth == 0
     min_v = evaluation(board, color, moves_list);
+elseif num_moves == 0
+    min_v = WeWinMagic(board, depth-1, -color, alpha, min_value, maxDepth);
 else
     
     for k = 1:num_moves
