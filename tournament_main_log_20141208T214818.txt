@@ -1,0 +1,1 @@
+2014-12-08 21:48:18	iWin	0	Lisa	64	Output argument "max_v" (and maybe others) not assigned during call to "D:\Othello\players\iWin\WeWinMagic.m>WeWinMagic".

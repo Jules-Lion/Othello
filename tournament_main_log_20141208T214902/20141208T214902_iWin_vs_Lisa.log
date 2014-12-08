@@ -1,0 +1,27 @@
+iWin against Lisa:
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+Lisa (-1) to move (time left: 180.0 sec.):
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0    -1    -1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+iWin (1) to move (time left: 180.0 sec.):
+   180
+
+1111111
+22222
+33333
+Output argument "max_v" (and maybe others) not assigned during call to "D:\Othello\players\iWin\WeWinMagic.m>WeWinMagic".

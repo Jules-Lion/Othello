@@ -1,0 +1,1 @@
+2014-12-08 22:01:28	iWin	0	Lisa	64	Error: Player has added more than one stone.

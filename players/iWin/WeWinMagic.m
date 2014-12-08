@@ -5,24 +5,32 @@ maxDepth = anfangstiefe;
 max_value = alpha;
 
 
+% hier die Nuller pruefen number of non zero elements in matrix
+if (nnz(board)<10)
+    
+    b = get_first_boards(board);
+    max_v=0;
+
+else
+
 [ moves_list, boards ] = get_valid_moves(board, color);
 
 num_moves = size(moves_list, 1);
 % TESTING
-if (depth == maxDepth)
-   if (num_moves <= 2)
-       depth = depth + 2;
-       maxDepth = maxDepth + 2;
-   elseif (num_moves <= 5)
-       depth = depth + 1;
-       maxDepth = maxDepth + 1;
-   elseif (num_moves <= 10)
-       % do nothing
-   else 
-       depth = depth - 1;
-       maxDepth = maxDepth - 1;
-   end
-end
+% if (depth == maxDepth)
+%    if (num_moves <= 1)
+%        depth = depth + 1;
+%        maxDepth = maxDepth + 2;
+%    elseif (num_moves <= 5)
+%        depth = depth + 1;
+%        maxDepth = maxDepth + 1;
+%    elseif (num_moves <= 10)
+%         maxDepth = maxDepth - 1;
+%    else 
+%        depth = depth - 3;
+%        maxDepth = maxDepth - 3;
+%    end
+% end
 % TESTING
 
 if depth == 0
@@ -51,6 +59,8 @@ else
     end
     max_v = max_value;
 end
+
+end   %end fuer if find board
 
 end
 
@@ -84,6 +94,8 @@ else
     
     min_v = min_value;
 end
+
+
 
 end
 

@@ -1,0 +1,1487 @@
+iWin against MiniMaxPlayer:
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     1    -1     0
+     0     0     0    -1     1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 180.0 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0    -1    -1    -1     0
+     0     0     0    -1     1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 180.0 sec.):
+   180
+
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     1     0
+     0     0    -1    -1     1     0
+     0     0     0    -1     1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 179.5 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0    -1
+     0     0     0     0    -1     0
+     0     0    -1    -1     1     0
+     0     0     0    -1     1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 167.3 sec.):
+  167.2520
+
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0    -1
+     0     0     0     0    -1     0
+     0     0    -1    -1     1     0
+     0     0     0     1     1     0
+     0     0     1     0     0     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 179.0 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0    -1
+     0     0     0     0    -1     0
+     0     0    -1    -1    -1     0
+     0     0     0    -1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 143.1 sec.):
+  143.1300
+
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0    -1
+     0     0     0     0    -1     1
+     0     0    -1    -1     1     0
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 178.6 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0    -1
+     0     0     0     0    -1    -1
+     0     0    -1    -1    -1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 137.9 sec.):
+  137.9390
+
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0     0     0     0    -1
+     0     0     0     1    -1    -1
+     0     0    -1     1    -1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 178.0 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0    -1     0     0    -1
+     0     0     0    -1    -1    -1
+     0     0    -1     1    -1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 115.8 sec.):
+  115.8350
+
+  Columns 1 through 6
+
+     0     0     0     0     0     0
+     0     0    -1     0     0     1
+     0     0     0    -1     1    -1
+     0     0    -1     1    -1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 177.2 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0    -1
+     0     0    -1     0     0    -1
+     0     0     0    -1     1    -1
+     0     0    -1     1    -1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 105.0 sec.):
+  105.0150
+
+  Columns 1 through 6
+
+     0     0     0     0     0    -1
+     0     0    -1     0     0    -1
+     0     0     0    -1     1     1
+     0     0    -1     1     1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 175.4 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     0    -1
+     0     0    -1     0     0    -1
+     0     0     0    -1    -1    -1
+     0     0    -1     1     1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+    -1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 50.2 sec.):
+   50.1530
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     0    -1
+     0     0     0    -1    -1    -1
+     0     0    -1     1     1    -1
+     0     0     0     1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+    -1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 171.4 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     0    -1
+     0     0     0    -1    -1    -1
+     0     0    -1    -1     1    -1
+     0     0    -1    -1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+    -1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 48.3 sec.):
+   48.2940
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1    -1
+     0     0    -1    -1     1    -1
+     0     0    -1    -1    -1     0
+     0     0     1     0    -1     0
+     0     0     0     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+    -1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 169.5 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1    -1
+     0     0    -1    -1     1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+    -1     0
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 46.8 sec.):
+   46.8040
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1     1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1     0
+     1     0
+     1     1
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 167.6 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1    -1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+    -1     0
+     1     1
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 44.5 sec.):
+   44.5450
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+    -1     0
+     1     1
+     1     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 166.7 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+    -1     0
+    -1     1
+    -1     0
+    -1     0
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 43.5 sec.):
+   43.4760
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+    -1     0
+    -1     1
+     1     0
+    -1     1
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 165.4 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+    -1     0
+    -1     1
+    -1    -1
+    -1     1
+     0     0
+     0     0
+     0     0
+
+iWin (1) to move (time left: 42.2 sec.):
+   42.2490
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1     1
+     0     0
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 164.8 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     0    -1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 41.4 sec.):
+   41.4130
+
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1     0     1     1
+     0     0     1     1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 164.2 sec.):
+  Columns 1 through 6
+
+     0     0     0     0     1     1
+     0     0    -1    -1     1     1
+     0     0     1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 40.4 sec.):
+   40.4100
+
+  Columns 1 through 6
+
+     0     0     1     0     1     1
+     0     0     1    -1     1     1
+     0     0     1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 163.2 sec.):
+  Columns 1 through 6
+
+     0    -1     1     0     1     1
+     0     0    -1    -1     1     1
+     0     0     1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 38.6 sec.):
+   38.6100
+
+  Columns 1 through 6
+
+     1     1     1     0     1     1
+     0     0    -1    -1     1     1
+     0     0     1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 161.9 sec.):
+  Columns 1 through 6
+
+     1     1     1     0     1     1
+     0     0    -1    -1     1     1
+     0    -1    -1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1    -1    -1     0
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+    -1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 37.8 sec.):
+   37.7560
+
+  Columns 1 through 6
+
+     1     1     1     0     1     1
+     0     0     1    -1     1     1
+     0    -1    -1     1    -1     1
+     0     0    -1    -1     1     1
+     0     0    -1    -1    -1     1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 161.1 sec.):
+  Columns 1 through 6
+
+     1     1     1     0     1     1
+     0    -1    -1    -1     1     1
+     0    -1    -1     1    -1     1
+     0     0    -1    -1     1     1
+     0     0    -1    -1    -1     1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 36.9 sec.):
+   36.8820
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     0    -1    -1     1     1     1
+     0    -1    -1     1    -1     1
+     0     0    -1    -1     1     1
+     0     0    -1    -1    -1     1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+     0    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 160.5 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     0    -1    -1     1     1     1
+     0    -1    -1    -1    -1     1
+     0     0    -1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 36.0 sec.):
+   35.9570
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     0     1    -1     1     1     1
+     1     1     1     1     1     1
+     0     0    -1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 160.2 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     0     1    -1     1     1     1
+     1    -1     1     1     1     1
+    -1     0    -1    -1    -1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 34.9 sec.):
+   34.8900
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     0     1    -1     1     1     1
+     1     1     1     1     1     1
+    -1     1     1     1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 159.8 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+    -1    -1    -1     1     1     1
+    -1    -1     1     1     1     1
+    -1     1    -1     1     1     1
+     0     0    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 34.1 sec.):
+   34.1320
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1    -1    -1     1     1     1
+     1    -1     1     1     1     1
+     1     1    -1     1     1     1
+     1     0    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 159.5 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1    -1    -1     1     1     1
+     1    -1     1     1     1     1
+     1    -1    -1     1     1     1
+     1    -1    -1    -1    -1    -1
+     0     0    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 33.5 sec.):
+   33.5140
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1    -1    -1    -1
+     0     1    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 159.3 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1    -1    -1    -1
+    -1    -1    -1     0    -1     0
+     0     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 32.7 sec.):
+   32.7120
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1    -1    -1    -1
+     1     1    -1     0    -1     0
+     1     0    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 159.1 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1    -1    -1    -1
+     1    -1    -1     0    -1     0
+     1    -1    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 32.2 sec.):
+   32.1580
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1     1     1     1    -1     0
+     1    -1    -1     0     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 158.8 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1     1    -1     1    -1     0
+     1    -1    -1    -1     0     0
+     0     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 31.7 sec.):
+   31.7000
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1     1     1     1    -1     0
+     1     1    -1    -1     0     0
+     1     0     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 158.6 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1    -1     1     1    -1     0
+     1    -1    -1    -1     0     0
+     1    -1     0     0     0     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 31.2 sec.):
+   31.2100
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1    -1     1     1    -1     0
+     1    -1    -1     1     0     0
+     1    -1     0     0     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 158.4 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1    -1     1     1    -1     0
+     1    -1    -1    -1     0     0
+     1    -1    -1     0     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 30.8 sec.):
+   30.8290
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1     1     1     1    -1     0
+     1    -1     1     1     0     0
+     1     1     1     1     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 158.1 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1    -1
+     1     1     1     1    -1     0
+     1    -1    -1    -1    -1     0
+     1     1     1     1     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 30.6 sec.):
+   30.5950
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1     1     0
+     1     1     1     1     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+MiniMaxPlayer (-1) to move (time left: 158.0 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1    -1     1    -1     1     1
+     1     1     1     1    -1     1
+     1    -1    -1    -1    -1    -1
+     1     1     1     1     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     0     0
+
+iWin (1) to move (time left: 30.4 sec.):
+   30.3960
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1    -1     1
+     1     1     1     1     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     0     0
+     1     0
+
+MiniMaxPlayer (-1) to move (time left: 157.8 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1    -1    -1
+     1     1     1     1     1     0
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+    -1     0
+     1     0
+
+iWin (1) to move (time left: 30.2 sec.):
+   30.2050
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1     1     1
+     1     1     1     1     1     1
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+    -1     0
+     1     0
+
+MiniMaxPlayer (-1) to move (time left: 157.7 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1     1     1
+     1     1     1     1     1     1
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+    -1     0
+     1     0
+
+iWin (1) to move (time left: 30.1 sec.):
+   30.0530
+
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1     1     1
+     1     1     1     1     1     1
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+     1     0
+     1     1
+
+MiniMaxPlayer (-1) to move (time left: 157.5 sec.):
+  Columns 1 through 6
+
+     1     1     1     1     1     1
+     1     1    -1     1     1     1
+     1     1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1     1     1     1     1
+     1     1     1     1     1     1
+     1    -1    -1    -1    -1    -1
+     1     1     1     1     1     1
+
+  Columns 7 through 8
+
+     1    -1
+     1     1
+    -1     1
+     1    -1
+    -1    -1
+    -1    -1
+    -1    -1
+     1     1
+
+Game over.

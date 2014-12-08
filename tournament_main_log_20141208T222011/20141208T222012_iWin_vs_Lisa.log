@@ -1,0 +1,122 @@
+iWin against Lisa:
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+Lisa (-1) to move (time left: 180.0 sec.):
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0    -1    -1    -1     0     0     0
+     0     0     0    -1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+iWin (1) to move (time left: 180.0 sec.):
+   180
+
+1111111
+22222
+33333
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0    -1    -1    -1     0     0     0
+     0     0     1     1     1     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+Lisa (-1) to move (time left: 179.5 sec.):
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0    -1    -1    -1     0     0     0
+     0     0     1    -1     1     0     0     0
+     0     0     0    -1     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+iWin (1) to move (time left: 179.8 sec.):
+  179.8300
+
+1111111
+22222
+33333
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     0
+     0     0     1     1    -1     0     0     0
+     0     0     1    -1     1     0     0     0
+     0     0     0    -1     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+Lisa (-1) to move (time left: 178.9 sec.):
+{Operation terminated by user during lisa_bewertung
+(line 201)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>maxwert
+(line 645)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>minwert
+(line 761)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>maxwert
+(line 677)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>minwert
+(line 761)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>maxwert
+(line 677)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>minwert
+(line 761)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>maxwert
+(line 677)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>lisa_minimax
+(line 623)
+
+
+In
+D:\Othello\players\Lisa\lisa_management.p>lisa_management
+(line 63)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('Lisa', 'D:\Othello\players\Lisa.m', 21)" style="font-weight:bold">Lisa</a> (<a href="matlab: opentoline('D:\Othello\players\Lisa.m',21,0)">line 21</a>)
+    new_board = lisa_management(board,farbe,time);
+
+In D:\Othello\tournament_main.p>play_game (line
+118)
+
+
+In D:\Othello\tournament_main.p>tournament_main
+(line 50)
+
+} 
+tournament_main('time_budget',180,'games_per_pair',1)
