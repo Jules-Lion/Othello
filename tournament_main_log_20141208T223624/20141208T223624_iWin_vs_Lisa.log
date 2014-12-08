@@ -280,4 +280,15 @@ In <a href="matlab:helpUtils.errorDocCallback('WeWinMagic', 'D:\Othello\players\
         value = min(-color, depth-1, new_board,
         max_value, beta, maxDepth);
 
-In <a href="matlab
+In <a href="matlab:helpUtils.errorDocCallback('iWin', 'D:\Othello\players\iWin.m', 19)" style="font-weight:bold">iWin</a> (<a href="matlab: opentoline('D:\Othello\players\iWin.m',19,0)">line 19</a>)
+    [val, b] = WeWinMagic(board, depth, color, -inf,
+    inf, depth);
+
+In D:\Othello\tournament_main.p>play_game (line 118)
+
+
+In D:\Othello\tournament_main.p>tournament_main (line
+50)
+
+} 
+tournament_main('time_budget',180,'games_per_pair',1)

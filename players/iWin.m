@@ -13,7 +13,7 @@ function b = iWin(board, color, time)
     elseif (time <= 120) 
         depth = 5;
     elseif (time <= 180)
-        depth = 5;
+        depth = 6;
     end
             
     [val, b] = WeWinMagic(board, depth, color, -inf, inf, depth);
