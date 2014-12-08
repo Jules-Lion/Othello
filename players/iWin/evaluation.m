@@ -23,8 +23,12 @@ function score = evaluation(board, color, moves_list)
     eigRandSteine = 0;
     gegRandSteine = 0;
 
-%% Final evaluation
 
+    % Statische Bewertung des Boards: einzelne felder werden statisch
+    % gewichtet. Zb sind eckfelder wertvoll, felder die an eckfelder
+    % angrenzen sind schlecht. Weiterhin wird hier die anzahl der
+    % eingenommenen steine bewertet. Viele steine sind gut, greedy ansatz.
+    % Beide evaluationsmethoden werden nur schwach bewertet.
 	for i=1:8
         for j=1:8
             if (board(i,j) == color)
@@ -61,7 +65,12 @@ function score = evaluation(board, color, moves_list)
 	else piece_diff = 0;
     end % if (eigSteine > gegSteine)
 
-    % Randsteine berechnen
+    % Randsteine berechnen: randsteine sind steine, an die leere felder
+    % angrenzen, das bedeutet, dass sie einnehmbar sind. Viele eigene
+    % randsteine werden negativ bewertet. Randsteine vertritt das
+    % Stabilitätskriterium. Wenige Randsteine machen den spieler nur
+    % schwierig angreifbar.
+    
 	if(eigRandSteine > gegRandSteine)
 		rand_Steine = -(100.0 * eigRandSteine)/(eigRandSteine + gegRandSteine);
     elseif(eigRandSteine < gegRandSteine)
@@ -70,7 +79,8 @@ function score = evaluation(board, color, moves_list)
         rand_Steine = 0;
     end % if (eigRandSteine > gegRandSteine)
     
-    % Eckfelder berechnen
+    % Eckfelder berechnen: die einnahme von ecksteinen wird stark positiv
+    % bewertet. 
     eigSteine = 0;
     gegSteine = 0;
 	if(board(1,1) == color) 
@@ -96,7 +106,9 @@ function score = evaluation(board, color, moves_list)
     
 	corners = 25 * (eigSteine - gegSteine);
 
-    % corner closeness
+    % corner closeness: die felder, die an ecksteine grenzen werden negativ
+    % bewertet. Wenn der spieler sie einnimmt wird dies negativ bewertet,
+    % wenn der gegner sie einnimmt wird dies positiv bewertet.
 	eigSteine = 0;
     gegSteine = 0;
     
@@ -174,16 +186,15 @@ function score = evaluation(board, color, moves_list)
     
 	closeness = -12.5 * (eigSteine - gegSteine);
 
-    %HIER BEGINNT GEWURSCHTEL VON MARKUS, WENN NICHT GEWÜNSCHT -> LÖSCHEN
-
-    enemy_moves = size(get_valid_moves(board, -color), 1);
     
-    %HIER ENDET GEWURSCHTEL VON MARKUS, WENN NICHT GEWÜNSCHT -> LÖSCHEN
-    
+    % Mobilitaet berechnen: wie viele züge habe ich in relation zu den
+    % möglichen zügen des gegners. Viele zugmöglichkeiten werden positiv
+    % bewertet.
     mobility = 0;
-    % Mobilitaet berechnen
+
+    %berechne anzahl der möglichen züge für spieler und gegner
 	eigSteine = size(moves_list, 1);
-	gegSteine = enemy_moves;
+	gegSteine = size(get_valid_moves(board, -color), 1);
 	if(eigSteine > gegSteine)
 		mobility = (100.0 * eigSteine)/(eigSteine + gegSteine);
     elseif(eigSteine < gegSteine)
@@ -191,6 +202,8 @@ function score = evaluation(board, color, moves_list)
     else
         mobility = 0;
     end 
+    
+%% Final evaluation    
     
     score = (10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (78.922 * mobility)  + (74.396 * rand_Steine) + (10 * value);
 end

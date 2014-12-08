@@ -1,0 +1,2 @@
+2014-12-08 12:52:59	iWin	48	MiniMaxPlayer	16	Game over.
+2014-12-08 12:56:43	MiniMaxPlayer	47	iWin	17	Game over.
