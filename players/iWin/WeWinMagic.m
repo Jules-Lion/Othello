@@ -33,7 +33,7 @@ num_moves = size(moves_list, 1);
 % end
 % TESTING
 
-if depth == 0
+if depth <= 0
     b = board;
     max_v = evaluation(board, color, moves_list);
 elseif num_moves == 0
@@ -73,7 +73,7 @@ min_value = beta;
 
 num_moves = size(moves_list, 1);
 
-if depth == 0
+if depth <= 0
     min_v = evaluation(board, color, moves_list);
 elseif num_moves == 0
     min_v = WeWinMagic(board, depth-1, -color, alpha, min_value, maxDepth);
