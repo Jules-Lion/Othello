@@ -2,6 +2,12 @@
 function b = iWin(board, color, time)
     addpath(['players' filesep 'iWin']);
 
+ if (nnz(board)<10)
+    disp('11111111111111')
+    b = get_first_boards(board);
+    
+ else
+
     disp([time]);
     
     if (time <= 15) 
@@ -18,4 +24,6 @@ function b = iWin(board, color, time)
             
     [val, b] = WeWinMagic(board, depth, color, -inf, inf, depth);
 
+end
+    
 end
