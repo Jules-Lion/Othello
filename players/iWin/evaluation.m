@@ -20,8 +20,10 @@ function score = evaluation(board, color, moves_list)
     value = 0;
     eigSteine = 0;
     gegSteine = 0;
-    eigRandSteine = 0;
-    gegRandSteine = 0;
+    eigFrontSteine = 0;
+    gegFrontSteine = 0;
+    eigFreieFrontFelder = 0;
+    gegFreieFrontFelder = 0;
 
 
     % Statische Bewertung des Boards: einzelne felder werden statisch
@@ -39,47 +41,96 @@ function score = evaluation(board, color, moves_list)
                 gegSteine = gegSteine +1;
             end 
             
-            if (board(i,j) ~= 0)  % stabilitätskriterium sind die randsteine.
+    % Mobilität: berechnung der anzahl an frontier stones vom spieler und
+    % gegenspieler, sowie aufsummierung der anzahl an freien feldern neben 
+    % ebendiesen frontier stones.
+            if (board(i,j) ~= 0)
+                eigFreiesFeldFlag = 1; % die flags werden genutzt damit wir
+                gegFreiesFeldFlag = 1; % nur einmal einen Frontstone zählen
                 for k=1:8
                     x = i + Rx(k);
                     y = j + Ry(k);
+                    
                     if ((x >= 1) && (x <= 8) && (y >= 1) && (y <= 8) && (board(x,y)==0))
+                        
+                        % folgende zwei if statements zählen nur die anzahl
+                        % der frontsteine und müssen daher nicht in alle
+                        % Richtungen aufaddiert werden
+                        if (eigFreiesFeldFlag == 1 && board(i,j) == color)
+                            eigFrontSteine = eigFrontSteine + 1;
+                            eigFreiesFeldFlag = 0;
+                        end % if (eigFreiesFeldFlag == 1)
+                        
+                        if (gegFreiesFeldFlag == 1 && board(i,j) ~= color)
+                            gegFrontSteine = gegFrontSteine + 1;
+                            gegFreiesFeldFlag = 0;
+                        end % if (gegFreiesFeldFlag == 1)
+                        
+                        % folgende statements zählen die anzahl an freien
+                        % felder um einen frontstein in allen 8 richtungen
                         if (board(i,j) == color)
-                            eigRandSteine = eigRandSteine +1;
+                            eigFreieFrontFelder = eigFreieFrontFelder + 1;
+                            
                         else
-                            gegRandSteine = gegRandSteine +1;
+                            gegFreieFrontFelder = gegFreieFrontFelder + 1;
+                            
                         
                         end % if (board(i,j) == color)
-                        break;
+                        % break;
                     end % if
                 end % for k=1:8
             end % if (board(i,j) ~= 0)
         end % for j=1:8
     end %for i=1:8
  
-    % Steindifferenz berechnen
+   %% Steindifferenz berechnen
     if(eigSteine > gegSteine)
 		piece_diff = (100.0 * eigSteine)/(eigSteine + gegSteine);
     elseif(eigSteine < gegSteine)
 		piece_diff = -(100.0 * gegSteine)/(eigSteine + gegSteine);
 	else piece_diff = 0;
     end % if (eigSteine > gegSteine)
+    
+    %% Mobilitaet berechnen: wie viele züge habe ich in relation zu den
+    % möglichen zügen des gegners. Viele zugmöglichkeiten werden positiv
+    % bewertet.
 
-    % Randsteine berechnen: randsteine sind steine, an die leere felder
+    % Current Mobility
+    % berechne anzahl der möglichen züge für spieler und gegner
+	eigMoves = size(moves_list, 1);
+	gegMoves = size(get_valid_moves(board, -color), 1);
+    
+    % Potential Mobility
+    % berechne potentiell mögliche mobilität in zukünftigen zügen.
+    % Kombination aus drei verschiedenen massen: anzahl der randsteine,
+    % anzahl der freien felder, die an gegnerische steine grenzen 
+    
+
+    % Mobility Evaluation
+	if(eigMoves > gegMoves)
+		mobility = (100.0 * eigMoves)/(eigMoves + gegMoves);
+    elseif(eigMoves < gegMoves)
+		mobility = -(100.0 * gegMoves)/(eigMoves + gegMoves);
+    else
+        mobility = 0;
+    end 
+
+    
+    % Frontsteine berechnen: Frontsteine sind steine, an die leere felder
     % angrenzen, das bedeutet, dass sie einnehmbar sind. Viele eigene
-    % randsteine werden negativ bewertet. Randsteine vertritt das
-    % Stabilitätskriterium. Wenige Randsteine machen den spieler nur
+    % Frontsteine werden negativ bewertet. Frontsteine vertritt das
+    % Mobilitätskriterium. Wenige Frontsteine machen den spieler nur
     % schwierig angreifbar.
     
-	if(eigRandSteine > gegRandSteine)
-		rand_Steine = -(100.0 * eigRandSteine)/(eigRandSteine + gegRandSteine);
-    elseif(eigRandSteine < gegRandSteine)
-		rand_Steine = (100.0 * gegRandSteine)/(eigRandSteine + gegRandSteine);
+	if(eigFrontSteine > gegFrontSteine)
+		rand_Steine = -(100.0 * eigFrontSteine)/(eigFrontSteine + gegFrontSteine);
+    elseif(eigFrontSteine < gegFrontSteine)
+		rand_Steine = (100.0 * gegFrontSteine)/(eigFrontSteine + gegFrontSteine);
     else
         rand_Steine = 0;
-    end % if (eigRandSteine > gegRandSteine)
+    end % if (eigFrontSteine > gegFrontSteine)
     
-    % Eckfelder berechnen: die einnahme von ecksteinen wird stark positiv
+    %% Eckfelder berechnen: die einnahme von ecksteinen wird stark positiv
     % bewertet. 
     eigSteine = 0;
     gegSteine = 0;
@@ -106,7 +157,7 @@ function score = evaluation(board, color, moves_list)
     
 	corners = 25 * (eigSteine - gegSteine);
 
-    % corner closeness: die felder, die an ecksteine grenzen werden negativ
+    %% corner closeness: die felder, die an ecksteine grenzen werden negativ
     % bewertet. Wenn der spieler sie einnimmt wird dies negativ bewertet,
     % wenn der gegner sie einnimmt wird dies positiv bewertet.
 	eigSteine = 0;
@@ -187,21 +238,8 @@ function score = evaluation(board, color, moves_list)
 	closeness = -12.5 * (eigSteine - gegSteine);
 
     
-    % Mobilitaet berechnen: wie viele züge habe ich in relation zu den
-    % möglichen zügen des gegners. Viele zugmöglichkeiten werden positiv
-    % bewertet.
-    mobility = 0;
-
-    %berechne anzahl der möglichen züge für spieler und gegner
-	eigSteine = size(moves_list, 1);
-	gegSteine = size(get_valid_moves(board, -color), 1);
-	if(eigSteine > gegSteine)
-		mobility = (100.0 * eigSteine)/(eigSteine + gegSteine);
-    elseif(eigSteine < gegSteine)
-		mobility = -(100.0 * gegSteine)/(eigSteine + gegSteine);
-    else
-        mobility = 0;
-    end 
+    
+    
     
 %% Final evaluation    
     
