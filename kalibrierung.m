@@ -377,20 +377,20 @@ max_value = alpha;
 
 num_moves = size(moves_list, 1);
 % TESTING
-% if (depth == maxDepth)
-%    if (num_moves <= 1)
-%        depth = depth + 1;
-%        maxDepth = maxDepth + 2;
-%    elseif (num_moves <= 5)
-%        depth = depth + 1;
-%        maxDepth = maxDepth + 1;
-%    elseif (num_moves <= 10)
-%         maxDepth = maxDepth - 1;
-%    else 
-%        depth = depth - 3;
-%        maxDepth = maxDepth - 3;
-%    end
-% end
+if (depth == maxDepth)
+   if (num_moves <= 2)
+       depth = depth + 2;
+       maxDepth = maxDepth + 2;
+   elseif (num_moves <= 5)
+       depth = depth + 1;
+       maxDepth = maxDepth + 1;
+   elseif (num_moves <= 10)
+        % do nothing
+   else 
+       depth = depth - 1;
+       maxDepth = maxDepth - 1;
+   end
+end
 % TESTING
 
 if depth <= 0
