@@ -85,9 +85,9 @@ function score = evaluation(board, color, moves_list)
  
    %% Steindifferenz berechnen
     if(eigSteine > gegSteine)
-		piece_diff = (100.0 * eigSteine)/(eigSteine + gegSteine);
+		piece_diff = (eigSteine)/(eigSteine + gegSteine);
     elseif(eigSteine < gegSteine)
-		piece_diff = -(100.0 * gegSteine)/(eigSteine + gegSteine);
+		piece_diff = -(gegSteine)/(eigSteine + gegSteine);
 	else piece_diff = 0;
     end % if (eigSteine > gegSteine)
     
@@ -98,37 +98,57 @@ function score = evaluation(board, color, moves_list)
     % Current Mobility
     % berechne anzahl der möglichen züge für spieler und gegner
 	eigMoves = size(moves_list, 1);
+%    eigMoves = size(get_valid_moves(board, color), 1);
 	gegMoves = size(get_valid_moves(board, -color), 1);
     
-    % Potential Mobility
+    % Mobility Evaluation
+    % Diese berechnung versucht den spieler zu maximieren und den gegner zu
+    % minimieren
+    mobility = (eigMoves - gegMoves) / (eigMoves + gegMoves);
+
+    
+    
+    %% Potential Mobility
     % berechne potentiell mögliche mobilität in zukünftigen zügen.
     % Kombination aus drei verschiedenen massen: anzahl der randsteine,
     % anzahl der freien felder, die an gegnerische steine grenzen 
     
-
-    % Mobility Evaluation
-	if(eigMoves > gegMoves)
-		mobility = (100.0 * eigMoves)/(eigMoves + gegMoves);
-    elseif(eigMoves < gegMoves)
-		mobility = -(100.0 * gegMoves)/(eigMoves + gegMoves);
-    else
-        mobility = 0;
-    end 
-
     
-    % Frontsteine berechnen: Frontsteine sind steine, an die leere felder
-    % angrenzen, das bedeutet, dass sie einnehmbar sind. Viele eigene
-    % Frontsteine werden negativ bewertet. Frontsteine vertritt das
+    % Mobilitätskriterium Frontsteine: Frontsteine sind steine, an die  
+    % leere felder angrenzen, das bedeutet, dass sie einnehmbar sind. Viele 
+    % eigene Frontsteine werden negativ bewertet. Frontsteine vertritt das
     % Mobilitätskriterium. Wenige Frontsteine machen den spieler nur
     % schwierig angreifbar.
     
-	if(eigFrontSteine > gegFrontSteine)
-		rand_Steine = -(100.0 * eigFrontSteine)/(eigFrontSteine + gegFrontSteine);
-    elseif(eigFrontSteine < gegFrontSteine)
-		rand_Steine = (100.0 * gegFrontSteine)/(eigFrontSteine + gegFrontSteine);
-    else
-        rand_Steine = 0;
-    end % if (eigFrontSteine > gegFrontSteine)
+    FrontSteine = (gegFrontSteine - eigFrontSteine) / (gegFrontSteine + eigFrontSteine);
+    freieFrontFelder = (gegFreieFrontFelder - eigFreieFrontFelder) / (gegFreieFrontFelder + eigFreieFrontFelder);
+    PotMobility = (freieFrontFelder + FrontSteine);
+    
+% % 	if(eigFrontSteine > gegFrontSteine)
+% % 		FrontSteine = -(100.0 * eigFrontSteine)/(eigFrontSteine + gegFrontSteine);
+% %     elseif(eigFrontSteine < gegFrontSteine)
+% % 		FrontSteine = (100.0 * gegFrontSteine)/(eigFrontSteine + gegFrontSteine);
+% %     else
+% %         FrontSteine = 0;
+% %     end % if (eigFrontSteine > gegFrontSteine)
+    
+
+
+
+    
+% folgende auskommentierte bewertung scheint mir seltsam. sie minimiert
+% den gegner nur, wenn er mehr züge als der spieler hat.
+% % 	if(eigMoves > gegMoves)
+% % 		mobility = (100.0 * eigMoves)/(eigMoves + gegMoves);
+% %     elseif(eigMoves < gegMoves)
+% % 		mobility = -(100.0 * gegMoves)/(eigMoves + gegMoves);
+% %     else
+% %         mobility = 0;
+% %     end 
+    
+
+    
+
     
     %% Eckfelder berechnen: die einnahme von ecksteinen wird stark positiv
     % bewertet. 
@@ -155,7 +175,7 @@ function score = evaluation(board, color, moves_list)
         gegSteine = gegSteine+1;
     end
     
-	corners = 25 * (eigSteine - gegSteine);
+	corners = (eigSteine - gegSteine);
 
     %% corner closeness: die felder, die an ecksteine grenzen werden negativ
     % bewertet. Wenn der spieler sie einnimmt wird dies negativ bewertet,
@@ -235,13 +255,23 @@ function score = evaluation(board, color, moves_list)
         end %if(board(8,7) == color)
     end % if (board(8,8) == 0)    
     
-	closeness = -12.5 * (eigSteine - gegSteine);
+	closeness = (gegSteine - eigSteine);
 
     
     
     
     
-%% Final evaluation    
-    
-    score = (10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (78.922 * mobility)  + (74.396 * rand_Steine) + (10 * value);
+%% Final evaluation 
+
+     score = (1000 * piece_diff) + (12000 * corners) + (12000 * mobility) + (8000 * PotMobility) + (2500 *closeness); % + (10 * value)
+     %    score = (10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (78.922 * mobility)  + (74.396 * FrontSteine) + (10 * value);
+
+    % debugging bzw algorithmus bewertung
+%     disp(['piece_diff:' num2str(1000 * piece_diff)])  
+%     disp(['corners:' num2str(12000 * corners)])
+%     disp(['closeness:' num2str(2500 * closeness)])
+%     disp(['mobility:' num2str(12000 * mobility)])
+%     disp(['PotMobility:' num2str(8000 * PotMobility)])
+%     disp(['Valuetable:' num2str(10 * value)])
+%     disp(['FinalScore:' num2str(score)])
 end
