@@ -74,7 +74,7 @@ function kalibrierung()
                     0, 0, 0, 0, 0, 0, 0, 0];
 
     
-    id = fopen('time.txt', 'w');
+    id = fopen('output.txt', 'w');
     fprintf(id, '%s\n', version);
     depth = 6;
     for k = 1:size(board, 3)
