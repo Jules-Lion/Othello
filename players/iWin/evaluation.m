@@ -1,4 +1,4 @@
-function score = evaluation(board, color, moves_list)
+function score = evaluation(board, color)
 
 %% Initialize valueTable
     valueTable =       [   20, -3, 11,  8,  8, 11, -3, 20;
@@ -97,9 +97,9 @@ function score = evaluation(board, color, moves_list)
 
     % Current Mobility
     % berechne anzahl der möglichen züge für spieler und gegner
-	eigMoves = size(moves_list, 1);
-%    eigMoves = size(get_valid_moves(board, color), 1);
-	gegMoves = size(get_valid_moves(board, -color), 1);
+
+	eigMoves = get_num_moves(board, color);
+	gegMoves = get_num_moves(board, -color);
     
     % Mobility Evaluation
     % Diese berechnung versucht den spieler zu maximieren und den gegner zu
