@@ -9,11 +9,7 @@ function score = evaluation(board, color)
                            11, -4,  2,  2,  2,  2, -4, 11;
                            -3, -7, -4,  1,  1, -4, -7, -3;
                            20, -3, 11,  8,  8, 11, -3, 20];
-
-
-
-                
-                
+            
     %Richtungen definieren
     Rx = [-1, -1, 0, 1, 1, 1, 0, -1];
     Ry = [0, 1, 1, 1, 0, -1, -1, -1];
@@ -84,7 +80,9 @@ function score = evaluation(board, color)
     end %for i=1:8
  
    %% Steindifferenz berechnen
-    if(eigSteine > gegSteine)
+   if (eigSteine + gegSteine == 0)
+        piece_diff = 0;
+   elseif(eigSteine > gegSteine)
 		piece_diff = (100.0 * eigSteine)/(eigSteine + gegSteine);
     elseif(eigSteine < gegSteine)
 		piece_diff = -(100.0 * gegSteine)/(eigSteine + gegSteine);
@@ -107,7 +105,9 @@ function score = evaluation(board, color)
     
 
     % Mobility Evaluation
-	if(eigMoves > gegMoves)
+    if (eigMoves + gegMoves == 0)
+        mobility = 0;
+    elseif(eigMoves > gegMoves)
 		mobility = (100.0 * eigMoves)/(eigMoves + gegMoves);
     elseif(eigMoves < gegMoves)
 		mobility = -(100.0 * gegMoves)/(eigMoves + gegMoves);
@@ -122,7 +122,9 @@ function score = evaluation(board, color)
     % Mobilitätskriterium. Wenige Frontsteine machen den spieler nur
     % schwierig angreifbar.
     
-	if(eigFrontSteine > gegFrontSteine)
+    if (eigFrontSteine + gegFrontSteine == 0)
+        rand_Steine = 0;
+    elseif(eigFrontSteine > gegFrontSteine)
 		rand_Steine = -(100.0 * eigFrontSteine)/(eigFrontSteine + gegFrontSteine);
     elseif(eigFrontSteine < gegFrontSteine)
 		rand_Steine = (100.0 * gegFrontSteine)/(eigFrontSteine + gegFrontSteine);
@@ -238,10 +240,9 @@ function score = evaluation(board, color)
 	closeness = -12.5 * (eigSteine - gegSteine);
 
     
+%% Final evaluation  
+
+    markusFaktor = 10;
     
-    
-    
-%% Final evaluation    
-    
-    score = (10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (78.922 * mobility)  + (74.396 * rand_Steine) + (10 * value);
+    score = (markusFaktor * 10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (markusFaktor * 78.922 * mobility)  + (markusFaktor * 74.396 * rand_Steine) + (10 * value);
 end

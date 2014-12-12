@@ -1,1 +1,0 @@
-2014-12-09 11:50:45	iWin	0	Lisa	64	Output argument "firstboards" (and maybe others) not assigned during call to "D:\Othello\players\iWin\get_first_boards.m>get_first_boards".
