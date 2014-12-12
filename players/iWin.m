@@ -4,11 +4,10 @@ function b = iWin(board, color, time)
 
     tokensPlayed = nnz(board);
     
-%  if (tokensPlayed<10)
-%     disp('11111111111111')
-%     b = get_first_boards(board);
+ if (tokensPlayed<8)
+    b = get_first_boards(board);
     
- if (tokensPlayed<20)
+ elseif (tokensPlayed<20)
      if (time <= 15) 
         depth = 2;
     elseif (time <= 30)
