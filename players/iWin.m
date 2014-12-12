@@ -11,7 +11,7 @@ function b = iWin(board, color, time)
      if (time <= 15) 
         depth = 2;
     elseif (time <= 30)
-        depth = 4;
+        depth = 5;
     elseif (time <= 60)
         depth = 5;
     elseif (time <= 168) 
@@ -29,14 +29,14 @@ function b = iWin(board, color, time)
     elseif (time <= 30)
         depth = 4;
     elseif (time <= 60)
-        depth = 6;
-    elseif (time <= 120) 
-        depth = 6;
+        depth = 5;
+    elseif (time <= 130) 
+        depth = 4;
     elseif (time <= 180)
-        depth = 7;
-        if (mod(tokensPlayed,2) == 0)
-        depth = depth - 1;
-        end
+        depth = 5;
+%         if (mod(tokensPlayed,2) == 0)
+%         depth = depth - 1;
+%         end
     end
  
     disp([depth]);

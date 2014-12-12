@@ -1,15 +1,26 @@
 function score = evaluation(board, color)
 
 %% Initialize valueTable
-    valueTable =       [   20, -3, 11,  8,  8, 11, -3, 20;
-                           -3, -7, -4,  1,  1, -4, -7, -3;
-                           11, -4,  2,  2,  2,  2, -4, 11;
-                            8,  1,  2, -3, -3,  2,  1,  8;
-                            8,  1,  2, -3, -3,  2,  1,  8;
-                           11, -4,  2,  2,  2,  2, -4, 11;
-                           -3, -7, -4,  1,  1, -4, -7, -3;
-                           20, -3, 11,  8,  8, 11, -3, 20];
-            
+%     valueTable =       [   20, -3, 11,  8,  8, 11, -3, 20;
+%                            -3, -7, -4,  1,  1, -4, -7, -3;
+%                            11, -4,  2,  2,  2,  2, -4, 11;
+%                             8,  1,  2, -3, -3,  2,  1,  8;
+%                             8,  1,  2, -3, -3,  2,  1,  8;
+%                            11, -4,  2,  2,  2,  2, -4, 11;
+%                            -3, -7, -4,  1,  1, -4, -7, -3;
+%                            20, -3, 11,  8,  8, 11, -3, 20];
+   
+% Marcin
+ valueTable =       [   100, -10, 11, 6,  6, 11, -10, 100;
+                        -10, -20, 1,  2,  2, 1, -20, -10;
+                        10, 1,  5,  4, 4, 5, 1, 10;
+                        6,  2,  4, 2, 2, 4, 2, 6;
+                        6,  2,  4, 2, 2, 4, 2, 6;
+                        10, 1,  5,  4, 4, 5, 1, 10;
+                        -10, -20, 1,  2,  2, 1, -20, -10;
+                         100, -10, 11, 6,  6, 11, -10, 100];
+
+
     %Richtungen definieren
     Rx = [-1, -1, 0, 1, 1, 1, 0, -1];
     Ry = [0, 1, 1, 1, 0, -1, -1, -1];
@@ -51,7 +62,7 @@ function score = evaluation(board, color)
                         
                         % folgende zwei if statements zählen nur die anzahl
                         % der frontsteine und müssen daher nicht in alle
-                        % Richtungen aufaddiert werden
+                        % Richtungen aufaddi    ert werden
                         if (eigFreiesFeldFlag == 1 && board(i,j) == color)
                             eigFrontSteine = eigFrontSteine + 1;
                             eigFreiesFeldFlag = 0;
@@ -98,22 +109,43 @@ function score = evaluation(board, color)
 	eigMoves = get_num_moves(board, color);
 	gegMoves = get_num_moves(board, -color);
     
+    %disp(eigMoves);
+    %disp(gegMoves);
+    
     % Potential Mobility
     % berechne potentiell mögliche mobilität in zukünftigen zügen.
     % Kombination aus drei verschiedenen massen: anzahl der randsteine,
     % anzahl der freien felder, die an gegnerische steine grenzen 
     
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Mobility Evaluation
-    if (eigMoves + gegMoves == 0)
-        mobility = 0;
-    elseif(eigMoves > gegMoves)
-		mobility = (100.0 * eigMoves)/(eigMoves + gegMoves);
-    elseif(eigMoves < gegMoves)
-		mobility = -(100.0 * gegMoves)/(eigMoves + gegMoves);
+%     if (eigMoves + gegMoves == 0)
+%         mobility = 0;
+%     elseif(eigMoves > gegMoves)
+% 		mobility = (100.0 * eigMoves)/(eigMoves + gegMoves);
+%     elseif(eigMoves < gegMoves)
+% 		mobility = -(100.0 * gegMoves)/(eigMoves + gegMoves);
+%     else
+%         mobility = 0;
+%     end 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%Marcin Mobility%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if (eigMoves + gegMoves ~= 0)
+        mobility = 100* (eigMoves - gegMoves)/(eigMoves + gegMoves);
     else
         mobility = 0;
-    end 
+    end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% disp(mobility);
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%Marcin Stabilität%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
     
     % Frontsteine berechnen: Frontsteine sind steine, an die leere felder
@@ -148,7 +180,8 @@ function score = evaluation(board, color)
     end
 	if(board(8,1) == color) 
         eigSteine = eigSteine+1;
-    elseif(board(8,1) == +color) 
+    %%%%%hier war + color%%%%%%%
+    elseif(board(8,1) == -color)                        
         gegSteine = gegSteine+1;
     end
 	if(board(8,8) == color) 
@@ -237,12 +270,10 @@ function score = evaluation(board, color)
         end %if(board(8,7) == color)
     end % if (board(8,8) == 0)    
     
-	closeness = -12.5 * (eigSteine - gegSteine);
-
+	closeness = 12.5 * (eigSteine - gegSteine);
+%disp(closeness);
     
 %% Final evaluation  
 
-    markusFaktor = 10;
-    
-    score = (markusFaktor * 10 * piece_diff) + (801.724 * corners) + (382.026 * closeness) + (markusFaktor * 78.922 * mobility)  + (markusFaktor * 74.396 * rand_Steine) + (10 * value);
+    score = (15 * piece_diff) + (40 * corners) + (30 * closeness) + (60 * mobility)  + (30 * rand_Steine) + (50 * value);
 end

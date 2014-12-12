@@ -64,7 +64,6 @@ else
     max_v = max_value;
 end
 
-% end   %end fuer if find board
 
 end
 
